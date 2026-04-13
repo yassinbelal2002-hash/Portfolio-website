@@ -3,369 +3,324 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Prezence Studio | Architectural Silence</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;600;800&amp;family=Space+Grotesk:wght@300;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-dim": "#131313",
-                        "primary-fixed-dim": "#e6c364",
-                        "on-primary-fixed-variant": "#584400",
-                        "on-background": "#e5e2e1",
-                        "surface-tint": "#e6c364",
-                        "tertiary-fixed-dim": "#b9c3ff",
-                        "outline": "#99907e",
-                        "on-secondary-container": "#b5b5b5",
-                        "secondary-container": "#464747",
-                        "surface-container-lowest": "#0e0e0e",
-                        "on-surface-variant": "#d0c5b2",
-                        "error": "#ffb4ab",
-                        "on-tertiary-fixed-variant": "#35437e",
-                        "on-tertiary-fixed": "#041451",
-                        "surface-container-highest": "#353534",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-low": "#1c1b1b",
-                        "primary-container": "#c9a84c",
-                        "on-surface": "#e5e2e1",
-                        "on-primary-container": "#503d00",
-                        "secondary": "#c7c6c6",
-                        "secondary-fixed-dim": "#c7c6c6",
-                        "outline-variant": "#4d4637",
-                        "inverse-on-surface": "#313030",
-                        "primary": "#e6c364",
-                        "primary-fixed": "#ffe08f",
-                        "tertiary-container": "#9ba8eb",
-                        "error-container": "#93000a",
-                        "on-tertiary": "#1e2b66",
-                        "on-secondary": "#303031",
-                        "surface-container-high": "#2a2a2a",
-                        "on-primary-fixed": "#241a00",
-                        "on-secondary-fixed-variant": "#464747",
-                        "secondary-fixed": "#e3e2e2",
-                        "background": "#0A0A0A",
-                        "surface": "#0A0A0A",
-                        "on-primary": "#3d2e00",
-                        "tertiary-fixed": "#dde1ff",
-                        "inverse-surface": "#e5e2e1",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "inverse-primary": "#755b00",
-                        "on-error": "#690005",
-                        "surface-container": "#1C1C1C",
-                        "surface-bright": "#3a3939",
-                        "tertiary": "#b9c4ff",
-                        "on-tertiary-container": "#2e3b77",
-                        "surface-variant": "#353534"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "6px",
-                        "xl": "8px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Space Grotesk", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#454747",
+                    "on-surface": "#e2e2e2",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#000000",
+                    "surface": "#131313",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#919191",
+                    "primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "background": "#131313",
+                    "on-primary-fixed-variant": "#e2e2e2",
+                    "on-error": "#690005",
+                    "on-tertiary": "#271900",
+                    "primary-container": "#d4d4d4",
+                    "on-surface-variant": "#c6c6c6",
+                    "primary-fixed": "#5d5f5f",
+                    "on-tertiary-fixed": "#ffffff",
+                    "tertiary-fixed-dim": "#5e4200",
+                    "surface-tint": "#c6c6c7",
+                    "inverse-primary": "#5d5f5f",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-highest": "#353535",
+                    "secondary-fixed": "#c8c6c5",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-container": "#ba881c",
+                    "tertiary-fixed": "#7c5800",
+                    "on-primary-fixed": "#ffffff",
+                    "on-secondary": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#3b3b3b",
+                    "on-secondary-container": "#e4e2e1",
+                    "secondary": "#c8c6c5",
+                    "surface-container": "#1f1f1f",
+                    "surface-variant": "#353535",
+                    "surface-bright": "#393939",
+                    "outline-variant": "#474747",
+                    "on-tertiary-fixed-variant": "#ffdea7",
+                    "on-primary-container": "#000000",
+                    "inverse-on-surface": "#303030",
+                    "on-background": "#e2e2e2",
+                    "on-primary": "#1a1c1c",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "secondary-container": "#474747",
+                    "secondary-fixed-dim": "#acabaa",
+                    "tertiary": "#ffdea7"
+            },
+            "borderRadius": {
+                    "none": "0px",
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Bebas Neue", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
             }
-        }
+          },
+        },
+      }
     </script>
 <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         body {
-            background-color: #0A0A0A;
-            color: #e5e2e1;
+            background-color: #131313;
+            color: #e2e2e2;
             font-family: 'Inter', sans-serif;
         }
-        .grid-overlay {
-            background-image: linear-gradient(#1C1C1C 1px, transparent 1px), linear-gradient(90deg, #1C1C1C 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
+        .bebas { font-family: 'Bebas Neue', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="selection:bg-primary selection:text-on-primary">
+<body class="selection:bg-tertiary selection:text-black">
 <!-- TopNavBar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#0A0A0A]/70 backdrop-blur-xl no-border tonal-shift">
-<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 border border-white relative">
-<div class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></div>
+<nav class="fixed top-0 w-full z-50 rounded-none bg-[#131313]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-24 w-full">
+<div class="font-['Bebas_Neue'] text-3xl font-bold tracking-tighter text-white">PREZENCE</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Bebas_Neue'] uppercase tracking-tight text-xl text-white border-b-2 border-white pb-1 transition-all" href="#work">WORK</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-tight text-xl text-[#c6c6c6] hover:text-white transition-colors" href="#services">SERVICES</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-tight text-xl text-[#c6c6c6] hover:text-white transition-colors" href="#about">ABOUT</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-tight text-xl text-[#c6c6c6] hover:text-white transition-colors" href="#contact">CONTACT</a>
 </div>
-<span class="text-2xl font-bold text-white tracking-tighter font-headline">Prezence Studio</span>
-</div>
-<div class="hidden md:flex space-x-12">
-<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#D0C5B2] hover:text-white transition-colors duration-300" href="#work">Work</a>
-<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#D0C5B2] hover:text-white transition-colors duration-300" href="#services">Services</a>
-<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#D0C5B2] hover:text-white transition-colors duration-300" href="#about">About</a>
-<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#D0C5B2] hover:text-white transition-colors duration-300" href="#contact">Contact</a>
-</div>
-<button class="px-6 py-2 border border-[#C9A84C] text-[#C9A84C] font-headline text-sm uppercase tracking-widest hover:bg-[#C9A84C] hover:text-on-primary transition-all duration-300 rounded-lg">
-                Get a Quote
-            </button>
-</div>
+<button class="bg-primary text-on-primary px-8 py-3 bebas text-xl tracking-wider hover:bg-[#393939] hover:text-white transition-all duration-200 active:scale-95">
+            GET A QUOTE
+        </button>
 </nav>
-<main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 px-8 overflow-hidden bg-background">
-<div class="absolute inset-0 grid-overlay opacity-30 pointer-events-none"></div>
-<div class="max-w-[1440px] mx-auto w-full relative z-10">
-<div class="max-w-4xl">
-<h1 class="text-5xl md:text-8xl font-headline font-bold text-white leading-[1.1] tracking-tighter mb-8">
-                        We build <span class="text-primary">digital presence</span> for brands that mean business.
-                    </h1>
-<p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-2xl leading-relaxed mb-12">
-                        Custom websites for restaurants, e-commerce brands, and service businesses across Egypt and the Gulf.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-6">
-<a class="px-10 py-4 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest text-sm rounded-lg hover:scale-105 transition-transform text-center" href="#work">
-                            View Our Work
-                        </a>
-<a class="px-10 py-4 border border-white text-white font-headline font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-white hover:text-black transition-all text-center" href="#contact">
-                            Get a Free Quote
-                        </a>
+<header class="relative min-h-screen flex flex-col justify-center px-8 md:px-24 pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20">
+<img class="w-full h-full object-cover grayscale" data-alt="Abstract architectural lines and dark geometric shapes with dramatic shadows in a minimalist obsidian-themed studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwlhXuGN5uksbXsKGJNXlolrlZGDg7GZte9edTvJJfbHDCc78L35z2P80Sicaw2vOiNOTYUBQHy1KYcy358Wd4RuojNq1NmD7Q6Zb-Jmlbuc-xXnxqVOgZlIJfXvpOsRadb84basrx09izfPPcvckUZZPB0ZpdwDpwz5COt3xb8xFq83wKlTjHgfFSeCgcjNacALONjf7llbarO0yejrtig4T6_Ny-rKbwtfIGqb4LVJlh4fv9Ck7zuq6s9DEpYoFymHc0lG1TK_qN"/>
+</div>
+<div class="relative z-10 max-w-6xl">
+<span class="bebas text-tertiary text-2xl tracking-[0.3em] mb-6 block">ESTABLISHED 2026</span>
+<h1 class="font-['Bebas_Neue'] text-7xl md:text-[10rem] leading-[0.85] text-white uppercase mb-12 tracking-tighter">
+                WE BUILD DIGITAL PRESENCE FOR BRANDS THAT <span class="text-tertiary">MEAN BUSINESS.</span>
+</h1>
+<div class="flex flex-col md:flex-row gap-6">
+<button class="bg-white text-black px-12 py-5 bebas text-3xl tracking-wide hover:bg-tertiary transition-colors flex items-center gap-4 group">
+                    VIEW PORTFOLIO
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-white px-12 py-5 bebas text-3xl tracking-wide hover:bg-white hover:text-black transition-colors">
+                    OUR PROCESS
+                </button>
 </div>
 </div>
+<div class="absolute bottom-12 right-12 hidden md:block">
+<div class="flex flex-col items-end gap-2 text-outline">
+<span class="bebas text-sm tracking-widest uppercase">Scroll to explore</span>
+<div class="w-[1px] h-24 bg-gradient-to-b from-white to-transparent"></div>
 </div>
-<!-- Decorative Element -->
-<div class="absolute bottom-20 right-8 hidden lg:block opacity-20">
-<span class="font-headline text-[15rem] leading-none text-outline-variant select-none">P.</span>
 </div>
-</section>
-<!-- Selected Work -->
-<section class="py-32 px-8 bg-surface" id="work">
-<div class="max-w-[1440px] mx-auto">
-<div class="mb-16">
-<span class="text-primary font-headline text-sm tracking-[0.3em] uppercase block mb-4">Selected Work</span>
-<h2 class="text-4xl font-headline text-white font-bold tracking-tight">Coded Excellence.</h2>
+</header>
+<!-- Work Section -->
+<section class="py-32 bg-surface" id="work">
+<div class="px-8 md:px-24 mb-20 flex justify-between items-end">
+<div>
+<h2 class="bebas text-8xl text-white leading-none">SELECTED WORK</h2>
+<p class="text-on-surface-variant font-body max-w-md mt-6 text-lg">High-performance digital experiences crafted for market leaders.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bebas text-white text-2xl tracking-widest border-b border-tertiary pb-2 cursor-pointer hover:text-tertiary transition-colors">
+                VIEW ALL PROJECTS
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-1 px-8 md:px-24">
 <!-- Project 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-video overflow-hidden rounded-lg bg-surface-container mb-6 relative">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Moody minimalist restaurant interior with dark lighting and premium table setting for a digital portfolio showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Qiml4QP2mfqJLxE1p7BFcP-C56siZDfNsj_LeUvetfmdSh-s62gftecLFEC4KAR9t5RAhjM6bgrPxdHAZahtjj2a0ebnhPJCAGm50TUVwOWMxb5ylp8ysFx9LwHRmJFTxhHp0d6VYKZuXTeez6diU-wDmSTBDuInkSojnwkvIEI6xKMZ8k9R1C52Ha5OeF4DX5Q7QfIgjLvACr8xKzKkc_ncFtj0iypHuEmgZWlZTRLqxu2L4eZ0Kb5ZgZRHU66Eer0Jl_Hje26o"/>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary transition-colors duration-500"></div>
+<div class="md:col-span-8 group relative overflow-hidden h-[600px] bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" data-alt="Minimalist luxury watch brand website interface displayed on a sleek black smartphone against a dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfH1ve47fVf6fdEh3dPJCCFMGOJ02lwtxlk1hACrNqchQG_VX6YaItuRVefTt4HwsK6tf4f1ZnZSJufA9Ap9vTxnOTiFjMbofrSHzM-CQNHzE28CxFwE7pajWGYX3wEhVATBBKCRkBX7hdZk8MAu6viuPhFTBpXkdRXGqXHQndPwaEnuIYaI-iV7FlvYX3jKFoM7bYcgSA2CigvMclGXjv6xVqmJophA5qARBrYHR4lRrtOBvAzCjGC96MgoKDmbiONqao1Qr3o4Jl"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-12">
+<span class="text-tertiary bebas text-xl tracking-widest mb-2">E-COMMERCE</span>
+<h3 class="bebas text-6xl text-white">CHRONOS LUXE</h3>
+<div class="flex gap-4 mt-6">
+<span class="px-4 py-1 border border-white/30 text-white text-xs tracking-widest uppercase font-label">Design</span>
+<span class="px-4 py-1 border border-white/30 text-white text-xs tracking-widest uppercase font-label">Development</span>
 </div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-headline text-white font-medium">Noor Cuisines</h3>
-<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded font-headline uppercase tracking-wider">Concept — Restaurant</span>
 </div>
-<p class="text-on-surface-variant text-sm mb-4">A high-end gastronomic experience reimagined for the digital age.</p>
-<a class="text-primary font-headline text-xs uppercase tracking-widest flex items-center group-hover:translate-x-2 transition-transform" href="#">
-                            View Project <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-</a>
 </div>
 <!-- Project 2 -->
-<div class="group cursor-pointer">
-<div class="aspect-video overflow-hidden rounded-lg bg-surface-container mb-6 relative">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Minimalist product shot of a high-end watch on a black textured surface with sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmcOvLbQQ2SMI5rFXbqrg6VGj_6haR7qBARO_Xgv1c2g6f2LQDslwPizd0PRfrBNMoGkFGLeFO-5Ueu7dqm3i1IOK5itauQXW1vMtUgxLWpiqZIHsdBoUvTT8naYDXhqOAjxeMCXEG-Z2Uw-xUx9IjqF7Nt28KUsgsCTEBGny9vI1WNuLY9fPqZU_umzwTmXkeTxLeE5zkt89cxjA7AOmTFatAFusQv0T5HH76q4E7OtwMczt6lPcJTaSlh3MEwdyp4diaK9zVEaJK"/>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary transition-colors duration-500"></div>
+<div class="md:col-span-4 group relative overflow-hidden h-[600px] bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-all duration-700" data-alt="Editorial layout for a tech architecture firm showing clean typography and sharp photographic angles of concrete buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthgNFoXYYqPRKLEgqkbR6n-Qj5YyLOOOS5LqMoI3kUq99wDzfO8P5ASa-JB9cuiLiIZ49ElUaTIjJP6zpThlw-ZyX9G19tAJJk5v4-2IFGkPzfPZlFtrALq3ZMOBORf1wrwDJgmVCOa8MbYrSujAOyivEyANzV0jdrMpQC0z2oBXSu-b7jZ4f2KRivDDRMGWDrgkbgs35R50VvxFQUz049lsPVIXhIEoFqX4MELuiZCoDYTkJaotPCdtiPdrQpEgC0ogGcJXW3ReS"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-tertiary bebas text-xl tracking-widest mb-2">PORTFOLIO</span>
+<h3 class="bebas text-5xl text-white">ARC STUDIO</h3>
 </div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-headline text-white font-medium">Voda Watches</h3>
-<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded font-headline uppercase tracking-wider">E-Commerce</span>
-</div>
-<p class="text-on-surface-variant text-sm mb-4">Seamless commerce integration for luxury timepiece collectors.</p>
-<a class="text-primary font-headline text-xs uppercase tracking-widest flex items-center group-hover:translate-x-2 transition-transform" href="#">
-                            View Project <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-</a>
 </div>
 <!-- Project 3 -->
-<div class="group cursor-pointer">
-<div class="aspect-video overflow-hidden rounded-lg bg-surface-container mb-6 relative">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Modern architectural office space with glass walls and dark steel beams in a minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwIxP5uCmrKM2-yXB81mNiC6Rw3GQN92-LdJUz56he1sqKwHMp7_L0AJo21E3Udh__f-gId36sQsRIdxptYgBkgdhPqZyOSYeF7EgJMP6FcdFyR6wcLWyV16GuLbHvG3oua-63QY9P7J8Sp9TLXB0bydX1j8N__iOb-kunCuCgcihmqmrKHPQB39Tt-s-udPSDnYkQ0ed_5Dgq2QfrFowtFbQELmvaHDFOc1m3bvJF-u5wDTiyL-Oe0S-ZDaBvr7I4AgI0he7crso-"/>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary transition-colors duration-500"></div>
-</div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-headline text-white font-medium">The Collective</h3>
-<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded font-headline uppercase tracking-wider">Service Agency</span>
-</div>
-<p class="text-on-surface-variant text-sm mb-4">Building a narrative for a regional architectural powerhouse.</p>
-<a class="text-primary font-headline text-xs uppercase tracking-widest flex items-center group-hover:translate-x-2 transition-transform" href="#">
-                            View Project <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-</a>
+<div class="md:col-span-12 group relative overflow-hidden h-[500px] mt-1 bg-surface-container-lowest">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-all duration-700" data-alt="High-concept digital branding for a fintech platform using abstract 3D glass elements and high-contrast typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD7m2A-kOoIlBNBr-skI7tE15cPboJEY9OVWsp_8NE1WDIJ7xUg8mxmozxwYDYW_gg1-KCNeeUdxR_Yr_C_lhrL_VUUnw4Jx6rSr8giEp-Q17imvRYIhvrF3560P5mbpyXkbnwGqk0kGZBmYtkjy0cAEDen2CO2ThOB0dACZOjA37zrTQpYD_bm1SmA-dyOdULd7YwJhQJtXz1lpOhWYQ4isdxfqqeKSvzowc1K2fBaajnodVnAlRxHg0xIaACT7FO9zGRkUuLqO0T"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center">
+<span class="text-tertiary bebas text-2xl tracking-[0.4em] mb-4">FINTECH TRANSFORMATION</span>
+<h3 class="bebas text-8xl text-white">NEO BANKING 2026</h3>
+<button class="mt-8 bg-white text-black px-10 py-4 bebas text-2xl tracking-widest hover:bg-tertiary transition-colors">EXPLORE CASE STUDY</button>
 </div>
 </div>
 </div>
 </section>
 <!-- Services Section -->
-<section class="py-32 px-8 bg-surface-container-lowest" id="services">
-<div class="max-w-[1440px] mx-auto">
-<div class="mb-20 text-center">
-<span class="text-primary font-headline text-sm tracking-[0.3em] uppercase block mb-4">What We Do</span>
-<h2 class="text-5xl font-headline text-white font-bold tracking-tight">Our Capabilities.</h2>
+<section class="py-32 bg-surface-container-lowest" id="services">
+<div class="px-8 md:px-24 grid md:grid-cols-2 gap-24 items-start">
+<div>
+<h2 class="bebas text-8xl text-white mb-8">WHAT<br/>WE DO</h2>
+<div class="w-24 h-1 bg-tertiary mb-12"></div>
+<p class="text-on-surface-variant text-xl leading-relaxed font-body max-w-lg">
+                    We specialize in creating digital weapons for modern business. No fluff, no filler—just high-performance code and razor-sharp design.
+                </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-1">
 <!-- Service 1 -->
-<div class="p-12 bg-surface-container hover:border-t-4 hover:border-primary transition-all duration-300 flex flex-col h-full rounded-xl">
-<div class="mb-10">
-<span class="text-primary text-5xl font-headline font-light italic">01</span>
-</div>
-<h3 class="text-2xl font-headline text-white font-bold mb-6">Landing Pages</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">High-converting, single-page experiences designed to turn visitors into loyal clients.</p>
-<div class="mt-auto">
-<span class="text-outline text-xs uppercase tracking-widest block mb-1">Starting from</span>
-<span class="text-white font-headline text-xl">$1,200+</span>
-</div>
+<div class="bg-surface-container p-12 hover:bg-surface-bright transition-colors group">
+<span class="text-tertiary bebas text-2xl mb-4 block">01</span>
+<h3 class="bebas text-5xl text-white mb-4">LANDING PAGES</h3>
+<p class="text-on-surface-variant group-hover:text-white transition-colors">High-conversion gateways designed to turn visitors into brand advocates within seconds of impact.</p>
 </div>
 <!-- Service 2 -->
-<div class="p-12 bg-surface-container hover:border-t-4 hover:border-primary transition-all duration-300 flex flex-col h-full rounded-xl">
-<div class="mb-10">
-<span class="text-primary text-5xl font-headline font-light italic">02</span>
-</div>
-<h3 class="text-2xl font-headline text-white font-bold mb-6">Full Websites</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">Comprehensive multi-page digital ecosystems that define your brand's authority.</p>
-<div class="mt-auto">
-<span class="text-outline text-xs uppercase tracking-widest block mb-1">Starting from</span>
-<span class="text-white font-headline text-xl">$3,500+</span>
-</div>
+<div class="bg-surface-container p-12 hover:bg-surface-bright transition-colors group">
+<span class="text-tertiary bebas text-2xl mb-4 block">02</span>
+<h3 class="bebas text-5xl text-white mb-4">FULL WEBSITES</h3>
+<p class="text-on-surface-variant group-hover:text-white transition-colors">Complete digital ecosystems that handle complex data while maintaining a minimalist, premium aesthetic.</p>
 </div>
 <!-- Service 3 -->
-<div class="p-12 bg-surface-container hover:border-t-4 hover:border-primary transition-all duration-300 flex flex-col h-full rounded-xl">
-<div class="mb-10">
-<span class="text-primary text-5xl font-headline font-light italic">03</span>
-</div>
-<h3 class="text-2xl font-headline text-white font-bold mb-6">E-commerce Stores</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">Custom shopping experiences built on modern frameworks for speed and conversion.</p>
-<div class="mt-auto">
-<span class="text-outline text-xs uppercase tracking-widest block mb-1">Starting from</span>
-<span class="text-white font-headline text-xl">$5,000+</span>
-</div>
+<div class="bg-surface-container p-12 hover:bg-surface-bright transition-colors group">
+<span class="text-tertiary bebas text-2xl mb-4 block">03</span>
+<h3 class="bebas text-5xl text-white mb-4">E-COMMERCE</h3>
+<p class="text-on-surface-variant group-hover:text-white transition-colors">Frictionless transaction environments tailored for luxury retail and high-end consumer brands.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- About Section -->
-<section class="py-32 px-8 bg-surface" id="about">
-<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-<div>
-<h2 class="text-5xl md:text-7xl font-headline font-bold text-white leading-tight mb-10">
-                        Lean. Focused. Built to deliver.
-                    </h2>
-<p class="text-xl text-on-surface-variant font-light leading-relaxed mb-10">
-                        We don't believe in digital clutter. Every pixel we place serves a purpose. Based between Cairo and Dubai, we bridge the gap between premium design and technical performance.
-                    </p>
-<a class="inline-flex items-center text-primary font-headline text-sm uppercase tracking-widest font-bold group" href="#">
-                        See how we work <span class="material-symbols-outlined ml-3 transition-transform group-hover:translate-x-2">east</span>
-</a>
+<section class="py-32 bg-surface border-y border-outline-variant/20" id="about">
+<div class="px-8 md:px-24 flex flex-col md:flex-row items-center gap-24">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-80 h-80 md:w-[500px] md:h-[500px] bg-surface-container-high flex items-center justify-center">
+<span class="bebas text-[18rem] md:text-[30rem] text-tertiary leading-none select-none">P</span>
+<div class="absolute -bottom-8 -right-8 bg-white p-8 md:p-12">
+<span class="bebas text-black text-4xl md:text-6xl tracking-tighter">SINCE 2026</span>
 </div>
-<div class="relative flex justify-center items-center py-20 bg-surface-container-low rounded-xl">
-<div class="w-64 h-64 border-2 border-primary/20 relative">
-<div class="absolute top-0 left-0 w-1/2 h-1/2 bg-primary"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="text-[12rem] font-headline text-primary/10 select-none font-bold">P</span>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="bebas text-7xl md:text-8xl text-white mb-12 leading-[0.9]">LEAN.<br/>FOCUSED.<br/>BUILT TO DELIVER.</h2>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-8">
+                    Prezence Studio is an elite digital collective based in the monolith. We don't believe in massive agency overhead or endless meetings. We believe in execution.
+                </p>
+<div class="grid grid-cols-2 gap-8 mt-12">
+<div>
+<div class="bebas text-5xl text-white">12+</div>
+<div class="text-tertiary text-sm tracking-widest uppercase mt-2">GLOBAL AWARDS</div>
+</div>
+<div>
+<div class="bebas text-5xl text-white">98%</div>
+<div class="text-tertiary text-sm tracking-widest uppercase mt-2">CLIENT RETENTION</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Process Section -->
-<section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
-<div class="max-w-[1440px] mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="relative">
-<span class="text-primary font-headline text-4xl block mb-6">01.</span>
-<h4 class="text-white text-xl font-headline font-bold mb-4">Brief</h4>
-<p class="text-on-surface-variant text-sm">Deep discovery of your goals and brand identity.</p>
-<div class="hidden md:block absolute top-1/2 -right-6 w-12 h-[1px] bg-outline-variant"></div>
+<section class="py-32 bg-surface-container-lowest">
+<div class="px-8 md:px-24 mb-24">
+<h2 class="bebas text-8xl text-white text-center">OUR ARCHITECTURE</h2>
 </div>
-<div class="relative">
-<span class="text-primary font-headline text-4xl block mb-6">02.</span>
-<h4 class="text-white text-xl font-headline font-bold mb-4">Design</h4>
-<p class="text-on-surface-variant text-sm">Translating strategy into an architectural visual language.</p>
-<div class="hidden md:block absolute top-1/2 -right-6 w-12 h-[1px] bg-outline-variant"></div>
+<div class="px-8 md:px-24 grid grid-cols-1 md:grid-cols-4 gap-1">
+<div class="bg-surface-container p-12 text-center border-t-4 border-tertiary">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6" data-icon="edit_note">edit_note</span>
+<h4 class="bebas text-3xl text-white mb-4">01. BRIEF</h4>
+<p class="text-sm text-on-surface-variant">Deep dive into brand DNA and commercial objectives.</p>
 </div>
-<div class="relative">
-<span class="text-primary font-headline text-4xl block mb-6">03.</span>
-<h4 class="text-white text-xl font-headline font-bold mb-4">Build</h4>
-<p class="text-on-surface-variant text-sm">Clean, high-performance code built for scalability.</p>
-<div class="hidden md:block absolute top-1/2 -right-6 w-12 h-[1px] bg-outline-variant"></div>
+<div class="bg-surface-container p-12 text-center border-t-4 border-white/10 hover:border-tertiary transition-all">
+<span class="material-symbols-outlined text-4xl text-white mb-6" data-icon="architecture">architecture</span>
+<h4 class="bebas text-3xl text-white mb-4">02. DESIGN</h4>
+<p class="text-sm text-on-surface-variant">Forging the visual language and user journey mapping.</p>
 </div>
-<div>
-<span class="text-primary font-headline text-4xl block mb-6">04.</span>
-<h4 class="text-white text-xl font-headline font-bold mb-4">Launch</h4>
-<p class="text-on-surface-variant text-sm">Optimized deployment and ongoing performance care.</p>
+<div class="bg-surface-container p-12 text-center border-t-4 border-white/10 hover:border-tertiary transition-all">
+<span class="material-symbols-outlined text-4xl text-white mb-6" data-icon="code">code</span>
+<h4 class="bebas text-3xl text-white mb-4">03. BUILD</h4>
+<p class="text-sm text-on-surface-variant">Precision engineering with clean, scalable modern code.</p>
 </div>
+<div class="bg-surface-container p-12 text-center border-t-4 border-white/10 hover:border-tertiary transition-all">
+<span class="material-symbols-outlined text-4xl text-white mb-6" data-icon="rocket_launch">rocket_launch</span>
+<h4 class="bebas text-3xl text-white mb-4">04. LAUNCH</h4>
+<p class="text-sm text-on-surface-variant">Deployment and performance optimization for impact.</p>
 </div>
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-32 px-8 bg-surface" id="contact">
-<div class="max-w-[1440px] mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<section class="py-32 bg-surface" id="contact">
+<div class="px-8 md:px-24 grid md:grid-cols-2 gap-24">
 <div>
-<h2 class="text-5xl md:text-7xl font-headline font-bold text-white mb-8">Ready to build your presence?</h2>
-<p class="text-on-surface-variant text-xl mb-12">Currently taking on projects for Q2 2026.</p>
-<div class="space-y-8">
-<a class="inline-flex items-center gap-4 px-8 py-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-colors group w-full sm:w-auto" href="https://wa.me/yourwhatsapp">
-<span class="material-symbols-outlined text-primary text-2xl">chat</span>
-<div>
-<span class="text-xs text-outline uppercase tracking-widest block">Direct Message</span>
-<span class="text-white font-medium">WhatsApp Us</span>
+<h2 class="bebas text-8xl text-white leading-[0.85] mb-12">READY TO BUILD YOUR PRESENCE?</h2>
+<p class="text-on-surface-variant text-2xl mb-12">Let's discuss how we can elevate your digital stance.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="mail">mail</span>
 </div>
-</a>
-<div class="flex gap-6 items-center">
-<a class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">share</span>
-</a>
-<a class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">alternate_email</span>
-</a>
-<a class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">work</span>
-</a>
+<span class="bebas text-2xl tracking-widest">HELLO@PREZENCE.STUDIO</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="location_on">location_on</span>
+</div>
+<span class="bebas text-2xl tracking-widest">NEW YORK / LONDON / TOKYO</span>
 </div>
 </div>
 </div>
-<div class="bg-surface-container-low p-10 rounded-xl">
-<form class="space-y-6">
-<div>
-<label class="text-xs uppercase tracking-widest text-outline mb-2 block">Your Name</label>
-<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-white p-2 transition-all outline-none" placeholder="John Doe" type="text"/>
+<div class="bg-surface-container-lowest p-12 border border-outline-variant/30">
+<form class="space-y-8">
+<div class="group">
+<label class="block font-label text-xs tracking-widest text-on-surface-variant mb-2 uppercase">Your Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-white focus:ring-0 transition-colors py-2 px-0 text-white" placeholder="NAME" type="text"/>
 </div>
-<div>
-<label class="text-xs uppercase tracking-widest text-outline mb-2 block">Email Address</label>
-<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-white p-2 transition-all outline-none" placeholder="john@example.com" type="email"/>
+<div class="group">
+<label class="block font-label text-xs tracking-widest text-on-surface-variant mb-2 uppercase">Work Email</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-white focus:ring-0 transition-colors py-2 px-0 text-white" placeholder="EMAIL ADDRESS" type="email"/>
 </div>
-<div>
-<label class="text-xs uppercase tracking-widest text-outline mb-2 block">Project Details</label>
-<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-white p-2 transition-all outline-none" placeholder="Tell us about your brand and needs..." rows="4"></textarea>
+<div class="group">
+<label class="block font-label text-xs tracking-widest text-on-surface-variant mb-2 uppercase">Project Details</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-white focus:ring-0 transition-colors py-2 px-0 text-white resize-none" placeholder="TELL US ABOUT THE MISSION" rows="4"></textarea>
 </div>
-<button class="w-full py-4 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest rounded-lg hover:brightness-110 transition-all">
-                                Send Inquiry
-                            </button>
+<button class="w-full bg-white text-black py-6 bebas text-3xl tracking-[0.2em] hover:bg-tertiary transition-colors flex justify-center items-center gap-4">
+                        SEND TRANSMISSION
+                        <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
 </form>
 </div>
 </div>
-</div>
 </section>
-</main>
 <!-- Footer -->
-<footer class="bg-[#0A0A0A] w-full py-12 border-t border-[#2A2A2A]/20">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 space-y-4 md:space-y-0 max-w-[1440px] mx-auto">
-<div class="flex items-center space-x-3">
-<div class="w-6 h-6 border border-white relative">
-<div class="absolute top-0 left-0 w-1/2 h-1/2 bg-white"></div>
+<footer class="w-full rounded-none pt-24 pb-12 bg-[#0e0e0e] flex flex-col items-center px-12">
+<div class="font-['Bebas_Neue'] text-9xl md:text-[15rem] font-black text-white/5 mb-8 tracking-tighter leading-none select-none">PREZENCE</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20 w-full max-w-4xl text-center">
+<a class="font-['Bebas_Neue'] uppercase tracking-widest text-lg text-[#919191] hover:text-white transition-colors" href="#">INSTAGRAM</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-widest text-lg text-[#919191] hover:text-white transition-colors" href="#">LINKEDIN</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-widest text-lg text-[#919191] hover:text-white transition-colors" href="#">TWITTER</a>
+<a class="font-['Bebas_Neue'] uppercase tracking-widest text-lg text-[#919191] hover:text-white transition-colors" href="#">BEYANCE</a>
 </div>
-<span class="text-xl font-bold text-white font-headline">PREZENCE STUDIO</span>
-</div>
-<div class="flex space-x-8">
-<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#99907E] hover:text-[#C9A84C] transition-all" href="#work">Work</a>
-<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#99907E] hover:text-[#C9A84C] transition-all" href="#services">Services</a>
-<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#99907E] hover:text-[#C9A84C] transition-all" href="#about">About</a>
-<a class="font-['Inter'] text-xs tracking-widest uppercase text-[#99907E] hover:text-[#C9A84C] transition-all" href="#contact">Contact</a>
-</div>
-<div class="text-right">
-<p class="font-['Inter'] text-xs tracking-widest uppercase text-[#99907E]">prezencestudio.com</p>
-<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-[#99907E] mt-1 opacity-50">© 2026 Prezence Studio. All rights reserved.</p>
-</div>
-</div>
+<div class="w-full h-[1px] bg-white/5 mb-12"></div>
+<p class="font-['Bebas_Neue'] uppercase tracking-widest text-sm text-[#919191]">
+            © 2026 PREZENCE STUDIO. ALL RIGHTS RESERVED.
+        </p>
 </footer>
+<!-- Fixed Action Button (Contextual for Contact) -->
+<a class="fixed bottom-8 right-8 bg-tertiary text-black w-20 h-20 flex items-center justify-center hover:scale-110 transition-transform z-40 group" href="#contact">
+<span class="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform" data-icon="chat_bubble">chat_bubble</span>
+</a>
 </body></html>
