@@ -818,7 +818,7 @@ try {
     varying vec2 vUv;
     void main(){
       vUv=uv; vec3 pos=position;
-      pos.z+=cnoise(vec3(pos.x*0.15, pos.y*0.8-uv.y, pos.z+time*uSpeed*3.0)*uScale)*2.0;
+      pos.z+=cnoise(vec3(pos.x*0.0, pos.y-uv.y, pos.z+time*uSpeed*3.0)*uScale);
       gl_Position=projectionMatrix*modelViewMatrix*vec4(pos,1.);
     }
   `;
@@ -827,10 +827,9 @@ try {
     uniform vec3 uLightColor; uniform float uNoiseIntensity; varying vec2 vUv;
     void main(){
       float local=fract(vUv.x);
-      float alpha=pow(1.0-abs(local-0.5)*2.0,1.8);
-      alpha*=1.0;
-      float grain=_n2(gl_FragCoord.xy*0.5);
-      alpha-=grain/20.0*uNoiseIntensity;
+      float alpha=pow(1.0-abs(local-0.5)*2.0,2.0);
+      float grain=_n2(gl_FragCoord.xy*0.8);
+      alpha-=grain/12.0*uNoiseIntensity;
       alpha=clamp(alpha,0.0,1.0);
       gl_FragColor=vec4(uLightColor*alpha,alpha);
     }
@@ -858,13 +857,13 @@ try {
   }
 
   const mat = new THREE.ShaderMaterial({
-    uniforms: { time:{value:0}, uSpeed:{value:2}, uScale:{value:0.2}, uNoiseIntensity:{value:1.5}, uLightColor:{value:new THREE.Vector3(1,1,1)} },
+    uniforms: { time:{value:0}, uSpeed:{value:2}, uScale:{value:0.2}, uNoiseIntensity:{value:1.75}, uLightColor:{value:new THREE.Vector3(0.5,0.5,0.5)} },
     vertexShader, fragmentShader,
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending
   });
 
-  /* 10 beams, each 4 units wide with 2-unit gaps, 40 units tall, 120 segments */
-  const mesh  = new THREE.Mesh(buildBeams(10,4,40,2,120), mat);
+  /* 20 beams, width 3, no gaps, 30 tall — matches React Bits default */
+  const mesh  = new THREE.Mesh(buildBeams(20,3,30,0,100), mat);
   const group = new THREE.Group();
   group.add(mesh);
   group.rotation.z = THREE.MathUtils.degToRad(30);
@@ -883,7 +882,7 @@ try {
   window.addEventListener('resize', resize, {passive:true});
 
   let last=0;
-  function tick(t){ const dt=Math.min((t-last)/1000,0.05); last=t; mat.uniforms.time.value+=2.0*dt; renderer.render(scene,camera); requestAnimationFrame(tick); }
+  function tick(t){ const dt=Math.min((t-last)/1000,0.05); last=t; mat.uniforms.time.value+=0.7*dt; renderer.render(scene,camera); requestAnimationFrame(tick); }
   requestAnimationFrame(tick);
 })();
 } catch(e) { console.warn('Beams init failed:', e); }
