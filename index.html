@@ -244,9 +244,17 @@
     .work-view-all:hover { color: var(--color-accent); }
 
     .work-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4px; }
-    .project-card { position: relative; overflow: hidden; background: var(--color-surface-low); cursor: pointer; }
+    .project-card {
+      position: relative; overflow: hidden; background: var(--color-surface-low); cursor: pointer;
+      will-change: transform; /* GPU-accelerated for smooth scrolling */
+    }
     .project-card.tall, .project-card.short { height: 560px; }
     .project-card.wide { height: 460px; margin-top: 4px; grid-column: 1 / -1; }
+
+    /* Themed backgrounds for each project */
+    .project-card[data-theme="hira"] { background: linear-gradient(145deg, #080E18 0%, #0d1f30 40%, #080E18 100%); }
+    .project-card[data-theme="elara"] { background: linear-gradient(145deg, #0a1628 0%, #132743 40%, #0a1628 100%); }
+    .project-card[data-theme="saha"] { background: linear-gradient(145deg, #1a1610 0%, #2a2318 40%, #1a1610 100%); }
 
     .project-placeholder {
       position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
@@ -256,9 +264,14 @@
       font-family: var(--font-heading); font-size: clamp(5rem, 14vw, 11rem);
       color: rgba(255,255,255,0.06); white-space: nowrap; user-select: none; letter-spacing: 0.05em;
     }
+    /* Themed placeholder text tints */
+    .project-card[data-theme="hira"] .project-placeholder-text { color: rgba(76,127,168,0.08); }
+    .project-card[data-theme="elara"] .project-placeholder-text { color: rgba(142,180,210,0.07); }
+    .project-card[data-theme="saha"] .project-placeholder-text { color: rgba(194,167,130,0.07); }
+
     /* hover overlay: dark bg, fades in on hover */
     .project-card-inner {
-      position: absolute; inset: 0; background: rgba(0,0,0,0.75);
+      position: absolute; inset: 0; background: rgba(0,0,0,0.75); z-index: 3;
       opacity: 0; transition: opacity 0.4s ease;
       display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem 2.5rem;
     }
@@ -267,7 +280,8 @@
     .project-card:hover .project-placeholder { transform: scale(1.05); }
 
     .project-type { font-family: var(--font-heading); font-size: 0.85rem; letter-spacing: 0.3em; color: var(--color-accent); margin-bottom: 0.25rem; }
-    .project-name { font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 3rem); color: var(--color-text-primary); line-height: 0.92; margin-bottom: 1rem; }
+    .project-name { font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 3rem); color: var(--color-text-primary); line-height: 0.92; margin-bottom: 0.6rem; }
+    .project-desc { font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.65; margin-bottom: 1rem; max-width: 38rem; }
     .project-tags { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .project-tag-pill { padding: 0.2rem 0.8rem; border: 1px solid rgba(255,255,255,0.25); color: var(--color-text-body); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
     /* Link btn sits below tags — no overlap possible */
@@ -285,7 +299,7 @@
       background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
       transition: opacity 0.4s ease;
     }
-    .project-card:hover .card-label { opacity: 0; }
+    .project-card:hover .card-label { opacity: 0; pointer-events: none; }
     .card-label-type { font-family: var(--font-heading); font-size: 0.78rem; letter-spacing: 0.25em; color: var(--color-accent); }
     .card-label-name { font-family: var(--font-heading); font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--color-text-primary); line-height: 1; margin-top: 0.2rem; }
 
@@ -531,54 +545,58 @@
       </div>
 
       <div class="work-grid">
-        <!-- Project 1 — TechFlow -->
-        <div class="project-card tall reveal">
-          <div class="project-placeholder"><span class="project-placeholder-text">TECHFLOW</span></div>
+        <!-- Project 1 — Hira (HR & Payroll) -->
+        <div class="project-card tall reveal" data-theme="hira">
+          <div class="project-placeholder"><span class="project-placeholder-text">HIRA</span></div>
           <div class="card-label">
-            <div class="card-label-type">LANDING PAGE</div>
-            <div class="card-label-name">TECHFLOW SAAS</div>
+            <div class="card-label-type">HR & PAYROLL PLATFORM</div>
+            <div class="card-label-name">HIRA</div>
           </div>
           <div class="project-card-inner">
-            <div class="project-type">LANDING PAGE</div>
-            <div class="project-name">TECHFLOW SAAS</div>
+            <div class="project-type">HR & PAYROLL PLATFORM</div>
+            <div class="project-name">HIRA</div>
+            <p class="project-desc">HR and payroll platform for MENA SMEs — dark navy with steel blue accents, built for a market genuinely underserved by localised payroll software.</p>
             <div class="project-tags">
               <span class="project-tag-pill">Design</span>
               <span class="project-tag-pill">Development</span>
+              <span class="project-tag-pill">SaaS</span>
             </div>
-            <a href="https://ybtechflow.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">VIEW LIVE →</a>
+            <a href="https://hirademo.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">VIEW LIVE →</a>
           </div>
         </div>
 
-        <!-- Project 2 — ShopHub -->
-        <div class="project-card short reveal reveal-d1">
-          <div class="project-placeholder"><span class="project-placeholder-text">SHOP</span></div>
+        <!-- Project 2 — Elara Clinic -->
+        <div class="project-card short reveal reveal-d1" data-theme="elara">
+          <div class="project-placeholder"><span class="project-placeholder-text">ELARA</span></div>
           <div class="card-label">
-            <div class="card-label-type">E-COMMERCE</div>
-            <div class="card-label-name">SHOPHUB</div>
+            <div class="card-label-type">AESTHETIC CLINIC</div>
+            <div class="card-label-name">ELARA CLINIC</div>
           </div>
           <div class="project-card-inner">
-            <div class="project-type">E-COMMERCE</div>
-            <div class="project-name">SHOPHUB</div>
+            <div class="project-type">AESTHETIC CLINIC</div>
+            <div class="project-name">ELARA CLINIC</div>
+            <p class="project-desc">Premium aesthetic medicine in New Cairo — cool navy base, steel blue accent. Same typographic DNA, completely different palette.</p>
             <div class="project-tags">
-              <span class="project-tag-pill">Storefront</span>
-              <span class="project-tag-pill">UX</span>
+              <span class="project-tag-pill">Design</span>
+              <span class="project-tag-pill">Healthcare</span>
             </div>
-            <a href="https://ybshophub.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">VIEW LIVE →</a>
+            <a href="https://elaraclinic.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">VIEW LIVE →</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 — TaskMaster (wide) -->
-      <div class="project-card wide reveal reveal-d2">
-        <div class="project-placeholder"><span class="project-placeholder-text">TASKMASTER</span></div>
+      <!-- Project 3 — Saha (wide) -->
+      <div class="project-card wide reveal reveal-d2" data-theme="saha">
+        <div class="project-placeholder"><span class="project-placeholder-text">SAHA</span></div>
         <div class="card-label" style="text-align:center;">
-          <div class="card-label-type">WEB APP</div>
-          <div class="card-label-name">TASKMASTER DASHBOARD</div>
+          <div class="card-label-type">E-COMMERCE</div>
+          <div class="card-label-name">SAHA BEAUTY</div>
         </div>
         <div class="project-card-inner">
-          <div class="project-type">WEB APP</div>
-          <div class="project-name">TASKMASTER DASHBOARD</div>
-          <a href="https://ybtechmaster.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">EXPLORE →</a>
+          <div class="project-type">E-COMMERCE</div>
+          <div class="project-name">SAHA BEAUTY</div>
+          <p class="project-desc">Egyptian clean beauty e-commerce — deliberately flipped to light mode to show range. Same typographic discipline, warm neutral accent.</p>
+          <a href="https://sahashop.netlify.app/" target="_blank" rel="noopener" class="project-link-btn">VIEW LIVE →</a>
         </div>
       </div>
 
@@ -894,10 +912,36 @@ try {
 (function(){ emailjs.init('7BX9Uxi0aglZnPeFg'); })();
 
 /* ════════════════════════════════════════════════
-   Nav scroll class
+   Nav scroll class + active section highlighting
 ════════════════════════════════════════════════ */
 const mainNav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => { mainNav.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+/* Throttled scroll handler for nav background */
+let scrollTick = false;
+window.addEventListener('scroll', () => {
+  if (!scrollTick) {
+    scrollTick = true;
+    requestAnimationFrame(() => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 60);
+      scrollTick = false;
+    });
+  }
+}, {passive:true});
+
+/* IntersectionObserver for active nav highlighting */
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.15, rootMargin: '-80px 0px -40% 0px' });
+sections.forEach(s => { if (s.id !== 'hero') navObserver.observe(s); });
 
 /* ════════════════════════════════════════════════
    Smooth scroll + close overlay
